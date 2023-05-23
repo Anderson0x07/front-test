@@ -82,7 +82,10 @@
 
 
             <br><br><br>
-            <div id="resultado">
+            <div id="resultado" class="alert alert-success">
+
+            </div>
+            <div id="conteo" class="alert alert-warning">
 
             </div>
 
@@ -93,8 +96,12 @@
                     .then((data) => {
                         console.log(data)
                         var divResultado = document.getElementById("resultado");
+                        var conteo = document.getElementById("conteo");
 
                         divResultado.innerText = data.mensaje;
+                        conteo.innerText = "Hay un total de "+data.conteoDeportistas+" deportistas que mejoraron";
+
+
                     });
                     
             
