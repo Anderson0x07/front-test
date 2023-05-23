@@ -55,28 +55,15 @@
                             <th>Estatura</th>
                             <th>Peso</th>
                             <th>Alcance</th>
-                            <th>Pretest</th>
-                            <th>Test</th>
-                            <th>Postest</th>
+                            <th>Pretest con imp</th>
+                            <th>Pretest sin imp</th>
+                            <th>Test con imp</th>
+                            <th>Test sin imp</th>
+                            <th>Postest con imp</th>
+                            <th>Postest sin imp</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% negocio.getCondiciones(); for(Usuario usuario: negocio.getListaUsuarios()){ %>
-                            <tr>
-                                <td>
-                                    <%= usuario.getNombre() + " " + usuario.getApellido() %>
-                                </td>
-                                <td>
-                                    <%= usuario.getPosicion() %>
-                                </td>
-                                <td>
-                                    <%= usuario.getResultado()%>
-                                </td>
-                                <td>
-                                    <%= usuario.getCondicion() %>
-                                </td>
-                            </tr>
-                            <% } %>
                     </tbody>
                 </table>
             </div>

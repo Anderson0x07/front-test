@@ -6,7 +6,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <script src="js/validaciones.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
 </head>
@@ -107,12 +106,52 @@
         <div id="divMensaje" class="alert alert-success"></div>
 
         <div class="form-group">
-          <input type="submit" value="Guardar Resultado" class="btn btn-success" />
+          
+          <input type="submit" value="Guardar Resultado" class="btn btn-success" "/>
           <input type="button" value="Cancelar" onclick="location.href='index.html'" class="btn btn-danger" />
         </div>
       </form>
     </div>
   </div>
+
+  <script>
+    const form = document.getElementById('frmResultados');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const estatura = document.getElementById('estatura').value;
+        const peso = document.getElementById('peso').value;
+        const alcance = document.getElementById('alcance').value;
+        const pre_test_con = document.getElementById('pre_test_con').value;
+        const pre_test_sin = document.getElementById('pre_test_sin').value;
+        const test_con = document.getElementById('test_con').value;
+        const test_sin = document.getElementById('test_sin').value;
+        const post_test_con = document.getElementById('post_test_con').value;
+        const post_test_sin = document.getElementById('post_test_sin').value;
+
+        const data = {
+            nombre: nombre,
+            estatura: estatura,
+            peso: peso,
+            alcance: alcance,
+            pre_test_con: pre_test_con,
+            pre_test_sin: pre_test_sin,
+            test_con: test_con,
+            test_sin: test_sin,
+            post_test_con: post_test_con,
+            post_test_sin: post_test_sin,
+        };
+
+        console.log(data)
+
+        fetch('http://localhost:8080/test/guardar', {
+            method: 'POST',
+            body: JSON.stringify(data)
+        })
+    })
+  </script>
 </body>
 
 </html>
