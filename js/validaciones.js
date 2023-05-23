@@ -1,18 +1,3 @@
-function validarDatos() {
-    var edad = frmResultados.edad.value;
-    var resultado = frmResultados.resultado.value;
-
-    System.out.println("edad: " + edad);
-
-    if (edad <= 0 || resultado < 0) {
-        System.out.println("edad: " + edad);
-        document.getElementById("divMensaje").innerHTML =
-            "Error la edad o el resultado debe ser mayor a 0";
-        frmUsuario.edad.focus();
-        return false;
-    }
-}
-
 function listarDeportistas() {
     var tabla = document.querySelector("tbody");
 
@@ -22,7 +7,7 @@ function listarDeportistas() {
 
             for (let i = 0; i < deportistas.length; i++) {
                 var fila = document.createElement("tr");
-        
+                
                 var nombre = document.createElement("td");
                 nombre.textContent = deportistas[i].nombre;
                 fila.appendChild(nombre);
