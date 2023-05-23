@@ -1,122 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Pagina de Inicio | Test</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="logo" width="80" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registrarTestDeportista.html"
-                >Registrar Resultados</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listadoDeportistas.html">Listado Deportistas</a>
-            </li>
-          </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="logo" width="80" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrarTestDeportista.html">Registrar Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadoDeportistas.html">Listado Deportistas</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <hr />
     <div class="card">
-      <div class="card-header">
-        <h1>Test de Voleibol</h1>
-      </div>
-
-      <div class="card-body">
-        <p>
-          El test de cooper es una prueba de resistencia que se basa en que los
-          jugadores que participen en el test corran la mayor distancia posible
-          en 12 minutos a una velocidad constante.
-        </p>
-
-        <!--Tabla de Valoración-->
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Categoria</th>
-                <th>menos de 30 años</th>
-                <th>30 a 39 años</th>
-                <th>40 a 49 años</th>
-                <th>50 años o mas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: bold">Muy Mala</td>
-                <td>Menos de 1600m</td>
-                <td>Menos de 1500m</td>
-                <td>Menos de 1400m</td>
-                <td>Menos de 1300m</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold">Mala</td>
-                <td>1600m a 2199m</td>
-                <td>1500m a 1899m</td>
-                <td>1400m a 1699m</td>
-                <td>1300m a 1599m</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold">Regular</td>
-                <td>2200m a 2399m</td>
-                <td>1900m a 2299m</td>
-                <td>1700m a 2099m</td>
-                <td>1600m a 1999m</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold">Buena</td>
-                <td>2400m a 2800m</td>
-                <td>2300m a 2700m</td>
-                <td>2100m a 2500m</td>
-                <td>2000m a 2400m</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold">Excelente</td>
-                <td>Mas de 2800m</td>
-                <td>Mas de 2700m</td>
-                <td>Mas de 2500m</td>
-                <td>Mas de 2400m</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="card-header">
+            <h1>Test de Voleibol</h1>
         </div>
-      </div>
-      <div class="card-footer">
-        <input
-          type="button"
-          value="Registrar Resultados"
-          onclick="location.href='registrarTestDeportista.html'"
-          class="btn btn-success"
-        />
-      </div>
+
+        <div class="card-body">
+            <p>
+                El test de voleibol es una prueba de resistencia que se basa en que los
+                jugadores que participen en el test corran la mayor distancia posible
+                en 12 minutos a una velocidad constante.
+            </p>
+
+            <!--Tabla de Valoración-->
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>menos de 30 años</th>
+                            <th>30 a 39 años</th>
+                            <th>40 a 49 años</th>
+                            <th>50 años o mas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold">Muy Mala</td>
+                            <td>Menos de 1600m</td>
+                            <td>Menos de 1500m</td>
+                            <td>Menos de 1400m</td>
+                            <td>Menos de 1300m</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">Mala</td>
+                            <td>1600m a 2199m</td>
+                            <td>1500m a 1899m</td>
+                            <td>1400m a 1699m</td>
+                            <td>1300m a 1599m</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">Regular</td>
+                            <td>2200m a 2399m</td>
+                            <td>1900m a 2299m</td>
+                            <td>1700m a 2099m</td>
+                            <td>1600m a 1999m</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">Buena</td>
+                            <td>2400m a 2800m</td>
+                            <td>2300m a 2700m</td>
+                            <td>2100m a 2500m</td>
+                            <td>2000m a 2400m</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold">Excelente</td>
+                            <td>Mas de 2800m</td>
+                            <td>Mas de 2700m</td>
+                            <td>Mas de 2500m</td>
+                            <td>Mas de 2400m</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="button" value="Registrar Resultados" onclick="location.href='registrarTestDeportista.html'"
+                class="btn btn-success" />
+        </div>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
-  </body>
+</body>
+
 </html>

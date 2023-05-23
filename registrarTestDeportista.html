@@ -1,156 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Registro de Resultados</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/validaciones.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="logo" width="80" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registrarTestDeportista.html"
-                >Registrar Resultados</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listadoDeportistas.html">Listado Deportistas</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <hr />
 
-    <div class="card">
-      <div class="card-header">
-        <h1>Registro de Resultados</h1>
-      </div>
+<head>
+  <title>Registro de Resultados</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script src="js/validaciones.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+</head>
 
-      <div class="card-body">
-        <form
-          id="frmResultados"
-          name="frmResultados"
-          action="guardarTest.jsp"
-          method="post"
-          onsubmit="return validarDatos()"
-        >
-          <div class="form-group">
-            <label for="nombre" class="form-label">Nombre: *</label>
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Digite su nombre"
-              required
-              class="form-control"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="apellido" class="form-label">Apellido: *</label>
-            <input
-              type="text"
-              name="apellido"
-              id="apellido"
-              placeholder="Digite su apellido"
-              required
-              class="form-control"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="posicion" class="form-label"
-              >Posición de Juego: *</label
-            >
-            <select id="posicion" name="posicion" required class="form-control">
-              <option value="Arquero" selected>Arquero</option>
-              <option value="Defensa">Defensa</option>
-              <option value="MC Ofensivo">Medio Campista Ofensivo</option>
-              <option value="Delantero">Delantero</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="edad" class="form-label">Edad: *</label>
-            <input
-              type="number"
-              name="edad"
-              id="edad"
-              placeholder="Digite la edad"
-              required
-              class="form-control"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email" class="form-label">Email: *</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Digite el email"
-              required
-              class="form-control"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="resultado" class="form-label"
-              >Resultado Obtenido:</label
-            >
-            <input
-              type="number"
-              name="resultado"
-              id="resultado"
-              placeholder="Digite el resultado obtenido"
-              required
-              class="form-control"
-            />
-          </div>
-          <br />
-          <div id="divMensaje" class="alert alert-success"></div>
-
-          <div class="form-group">
-            <input
-              type="submit"
-              value="Guardar Resultado"
-              class="btn btn-success"
-            />
-            <input
-              type="button"
-              value="Cancelar"
-              onclick="location.href='index.html'"
-              class="btn btn-danger"
-            />
-          </div>
-        </form>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="logo" width="80" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registrarTestDeportista.html">Registrar Resultados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listadoDeportistas.html">Listado Deportistas</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
+  </nav>
+  <hr />
+
+  <div class="card">
+    <div class="card-header">
+      <h1>Registro de Resultados</h1>
+    </div>
+
+    <div class="card-body">
+      <form id="frmResultados" name="frmResultados">
+        <div class="form-group">
+          <label for="nombre" class="form-label">Nombre: *</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Digite su nombre" required class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="estatura" class="form-label">Estatura: *</label>
+          <input type="text" name="estatura" id="estatura" placeholder="Digite su estatura" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="peso" class="form-label">Peso: *</label>
+          <input type="number" name="peso" id="peso" placeholder="Digite la peso" required class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="alcance" class="form-label">Alcance: *</label>
+          <input type="number" name="alcance" id="alcance" placeholder="Digite la alcance" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="pre_test_con" class="form-label">Resultado Obtenido Pre Test con Impulto:</label>
+          <input type="number" name="pre_test_con" id="pre_test_con" placeholder="Digite el resultado obtenido" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="pre_test_sin" class="form-label">Resultado Obtenido Pre Test sin Impulto:</label>
+          <input type="number" name="pre_test_sin" id="pre_test_sin" placeholder="Digite el resultado obtenido" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="test_con" class="form-label">Resultado Obtenido Test con Impulto:</label>
+          <input type="number" name="test_con" id="test_con" placeholder="Digite el resultado obtenido" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="test_sin" class="form-label">Resultado Obtenido Test sin Impulto:</label>
+          <input type="number" name="test_sin" id="test_sin" placeholder="Digite el resultado obtenido" required
+            class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="post_test_con" class="form-label">Resultado Obtenido Post Test con Impulto:</label>
+          <input type="number" name="post_test_con" id="post_test_con" placeholder="Digite el resultado obtenido"
+            required class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="post_test_sin" class="form-label">Resultado Obtenido Post Test sin Impulto:</label>
+          <input type="number" name="post_test_sin" id="post_test_sin" placeholder="Digite el resultado obtenido"
+            required class="form-control" />
+        </div>
+        <br />
+
+        <div id="divMensaje" class="alert alert-success"></div>
+
+        <div class="form-group">
+          <input type="submit" value="Guardar Resultado" class="btn btn-success" />
+          <input type="button" value="Cancelar" onclick="location.href='index.html'" class="btn btn-danger" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
 </html>

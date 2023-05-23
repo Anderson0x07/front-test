@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Listado Deportistas</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -11,50 +12,78 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/dataTable/jquery.dataTables.min.js"></script>
-  </head>
-  <body>
-    <div class="card">
-      <div class="card-header">
-        <h1>Listado de Usuarios del Test</h1>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-          <table id="tablaUsuarios" class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Estatura</th>
-                <th>Peso</th>
-                <th>Alcance</th>
-                <th>Pretest</th>
-                <th>Test</th>
-                <th>Postest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% negocio.getCondiciones(); for(Usuario usuario:
-              negocio.getListaUsuarios()){ %>
-              <tr>
-                <td>
-                  <%= usuario.getNombre() + " " + usuario.getApellido() %>
-                </td>
-                <td><%= usuario.getPosicion() %></td>
-                <td><%= usuario.getResultado()%></td>
-                <td><%= usuario.getCondicion() %></td>
-              </tr>
-              <% } %>
-            </tbody>
-          </table>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="logo" width="80" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrarTestDeportista.html">Registrar Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadoDeportistas.html">Listado Deportistas</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="card-footer">
-        <input
-          type="button"
-          value="Ir a inicio"
-          onclick="location.href='index.html'"
-          class="btn btn-success"
-        />
-      </div>
+    </nav>
+    <hr />
+
+    <div class="card">
+        <div class="card-header">
+            <h1>Listado de Usuarios del Test</h1>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="tablaUsuarios" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Estatura</th>
+                            <th>Peso</th>
+                            <th>Alcance</th>
+                            <th>Pretest</th>
+                            <th>Test</th>
+                            <th>Postest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% negocio.getCondiciones(); for(Usuario usuario: negocio.getListaUsuarios()){ %>
+                            <tr>
+                                <td>
+                                    <%= usuario.getNombre() + " " + usuario.getApellido() %>
+                                </td>
+                                <td>
+                                    <%= usuario.getPosicion() %>
+                                </td>
+                                <td>
+                                    <%= usuario.getResultado()%>
+                                </td>
+                                <td>
+                                    <%= usuario.getCondicion() %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="button" value="Ir a inicio" onclick="location.href='index.html'" class="btn btn-success" />
+        </div>
     </div>
 
     <script src="js/dataTable/dataTables.buttons.min.js"></script>
@@ -65,12 +94,13 @@
     <script src="js/dataTable/buttons.html5.min.js"></script>
     <script src="js/dataTable/buttons.print.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
-        $("#tablaUsuarios").DataTable({
-          dom: "Bfrtip",
-          buttons: ["copy", "csv", "excel", "pdf", "print"],
+        $(document).ready(function () {
+            $("#tablaUsuarios").DataTable({
+                dom: "Bfrtip",
+                buttons: ["copy", "csv", "excel", "pdf", "print"],
+            });
         });
-      });
     </script>
-  </body>
+</body>
+
 </html>
