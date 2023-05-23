@@ -81,6 +81,24 @@
             </ul>
 
 
+            <br><br><br>
+            <div id="resultado">
+
+            </div>
+
+            <script>
+        
+                fetch("http://localhost:8080/test/resultado")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log(data)
+                        var divResultado = document.getElementById("resultado");
+
+                        divResultado.innerText = data.mensaje;
+                    });
+                    
+            
+            </script>
 
 
             
